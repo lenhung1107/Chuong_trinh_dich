@@ -1,0 +1,33 @@
+PROGRAM Example2; (* Example 2 *)
+VAR x, y: REAL;
+    z: BOOLEAN;
+    message: STRING;
+    matrix: ARRAY (.50.) OF REAL;
+BEGIN
+  (* Test arithmetic and assignment *)
+  x := y * z + a / b - c % d;
+
+  (* Test comparison operators *)
+  IF x = y THEN x := 1.5;
+  IF x != y THEN x := 2.5;
+  IF x < y THEN x := 3.5;
+  IF x <= y THEN x := 4.5;
+  IF x > y THEN x := 5.5;
+  IF x >= y THEN x := 6.5;
+
+  (* Logical expressions and procedure calls *)
+  CALL PrintLn();
+  CALL PrintR(x);
+  CALL PrintB(z);
+
+  (* Array access *)
+  matrix(.10.) := 200.5;
+
+  (* Strings and characters *)
+  message := 'Testing\, \"string\" handling.';
+  z := TRUE;
+
+  (* Comments *)
+  // Another single-line comment
+  (* Another multi-line comment *)
+END.
